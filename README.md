@@ -1,34 +1,43 @@
-# ethereum
-privatechain
+Ethereum
 
-Congratulations for you initial your private node of Ethereum network.
-Now let's start with the first Smart Contract.
+Welcome to the NCCUCoin LAB on Ethereum network.
 
-Before we start, there are many resources you can refrence below:
-
-* 	[Your first citizen: the greeter](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
-* 	[Writing a contract](https://ethereum.gitbooks.io/frontier-guide/content/writing_contract.html)
-* 	[A 101 Noob Intro to Programming Smart Contracts on Ethereum](https://medium.com/@ConsenSys/a-101-noob-intro-to-programming-smart-contracts-on-ethereum-695d15c1dab4#.814nassq1)
-* 	[Contracts and Transactions](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions)
-* 	[Oraclize’s documentation](https://docs.oraclize.it/#introduction)
-
+For develop the DApp on Ethereum, It needs to setup a private blockchain with multi-nodes, so that we can test smart contracts as per tutorials.
 
 There are only 3 Steps for us to play:
-
-* 	Step 1) Install **Ethereum client** and **Ethereum Wallet**, Of course you need to start the node (run the geth and wallet).
-* 	Step 2) Code the Smart Contract and Compile/Deploy to your network.
-* 	Step 3) Verify your Smart Contract.
-
+* 	Step 1) Install **Ethereum client** and **Ethereum Wallet(Optional)**.
+* 	Step 2) Create a new <datadir> folder in your system and deploy the [nccugenesis.json] and [static-nodes.json] files.
+* 	Step 3) Launch the geth client [geth_nccu_cs.sh] and mine some NCCUCoin.
 
 ### Step 1 Install
-It needs to install the **Ethereum client** and **Ethereum Wallet**. You can find the install guide as [Ethereum docs](https://github.com/yugawa33/ethereum/wiki/How-to-setup-Ethereum-multi-node-private-blockchain-for-testing). 
+It needs to install the **Ethereum client** and **Ethereum Wallet**. You can find the install guide as [Ethereum docs](http://www.ethdocs.org/en/latest/ethereum-clients/choosing-a-client.html#installing-a-client). 
 For the type of Ethereum client I select the go-ethereum client.
 
+After install the Ethereum client, If you just want to launch your private chain as yourself and not to connect to other node. 
+More information about as [Command Line Options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
+You can run the geth instance as the scipt below:
 
-### Step 2 Coding/Compile/Deploy
-Now there is the integration of Solidity and the Smart Contracts that work with Ethereum blockchains into Visual Studio 2015 Community, Professional, or Enterprise edition. This exists as an extension that is available [here](https://medium.com/@ConsenSys/solidity-integration-with-visual-studio-8bdab2ff8a74#.ko8g67ebl).
-Or you can just use **Ethereum Wallet** to Coding/Compile/Deploy/Interact with your first Smart Contract. There is the sample code of Contract storage.
+```
+ geth --networkid <any number for your private network> --datadir "<your datadir folder>"
+```
 
+Or connect to real Ethereum network
+```
+ geth 
+```
+
+Or connect to test Ethereum network
+```
+ geth --testnet
+```
+
+After launch the first instance of geth, You can also launch the second or more geth instance as console mode. with this ocnsole mode you can trigger the mine process or creat new account.
+```
+ geth attach
+```
+
+
+### Step 2 Setup
 Create a new <datadir> folder in your system and deploy the nccugenesis.json(on the folder you launch geth) and static-nodes.json(on your datadir folder) files.
 
 ### Step 3 Launch
