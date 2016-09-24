@@ -38,13 +38,17 @@ After launch the first instance of geth, You can also launch the second or more 
 
 
 ### Step 2 Setup
-Create a new <datadir> folder in your system and deploy the nccugenesis.json(on the folder you launch geth) and static-nodes.json(on your datadir folder) files.
+Create a new <datadir> folder in your system and deploy(copy) the nccugenesis.json(on the folder you launch geth) and static-nodes.json(on your datadir folder) files. Run the command to init it:
+```
+geth init nccugenesis.json
+```
+
 
 ### Step 3 Launch
 As the geth_nccu_cs.sh, remember change --datadir "<your datadir>"
 
 ```
-geth --maxpeers 25 --genesis nccugenesis.json --networkid 104971 --port 33333 --rpc --rpccorsdomain "*" --datadir "<your datadir>"
+geth --maxpeers 25 --networkid 104971 --port 33333 --rpc --rpccorsdomain "*" --datadir "<your datadir>"
 ```
 
 After launch the first geth, please launch the secend geth as console mode to create new account and mine some NCCUCoin.
@@ -53,7 +57,7 @@ After launch the first geth, please launch the secend geth as console mode to cr
 ```
 
 Creates a new account and prints the address. [Manage your accounts](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts)
-On the console, use:
+On the console, use the script and you will get a new address with return:
 ```
 > personal.newAccount("<your password for this account>")
 ```
