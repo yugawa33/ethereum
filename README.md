@@ -15,7 +15,7 @@ For the type of Ethereum client I select the go-ethereum client.
 
 After install the Ethereum client, If you just want to launch your private chain as yourself and not to connect to other node. 
 More information about as [Command Line Options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
-In the parameter of --networkid value is Network identifier (integer, 0=Olympic, 1=Frontier, 2=Morden) (default: 1), you can choose any value as your private network. We choose '104'+'971' as 'chain create at chinese year'+'NCCU department code'.
+In the parameter of --networkid value is Network identifier (integer, 0=Olympic, 1=Frontier, 2=Morden) (default: 1), you can choose any value as your private network. We choose our network id '104'+'971' as 'chain create at chinese year'+'NCCU department code'.
 Now you can run the geth instance as the scipt below:
 
 ```
