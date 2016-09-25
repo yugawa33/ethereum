@@ -15,7 +15,8 @@ For the type of Ethereum client I select the go-ethereum client.
 
 After install the Ethereum client, If you just want to launch your private chain as yourself and not to connect to other node. 
 More information about as [Command Line Options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
-You can run the geth instance as the scipt below:
+In the parameter of --networkid value is Network identifier (integer, 0=Olympic, 1=Frontier, 2=Morden) (default: 1), you can choose any value as your private network. We choose '104'+'971' as 'chain create at chinese year'+'NCCU department code'.
+Now you can run the geth instance as the scipt below:
 
 ```
  geth --networkid <any number for your private network> --datadir "<your datadir folder>"
@@ -38,7 +39,8 @@ After launch the first instance of geth, You can also launch the second or more 
 
 
 ### Step 2 Setup
-Create a new <datadir> folder in your system and deploy(copy) the nccugenesis.json(on the folder you launch geth) and static-nodes.json(on your datadir folder) files. Run the command to init it:
+Create a new <datadir> folder in your system and deploy (copy these 2 *.json file from the code list above) the nccugenesis.json to the folder you launch geth and static-nodes.json(on your datadir folder) files. The more information about the genesis block can reference by [Ethereum Yellow Paper -- 4.4. The Block](http://gavwood.com/Paper.pdf) and [Custom Genesis Block](http://blog.carl.pro/2015/09/setup-a-local-ethereum-test-blockchain/). Run the command to init it:
+
 ```
 geth init nccugenesis.json
 ```
